@@ -28,6 +28,7 @@ export const EXT_TO_LANGUAGE: Record<string, string> = {
   ".kt": "kotlin",
   ".kts": "kotlin",
   ".scala": "scala",
+  ".sc": "scala",
   ".ex": "elixir",
   ".exs": "elixir",
   ".lua": "lua",
@@ -42,6 +43,9 @@ export const EXT_TO_LANGUAGE: Record<string, string> = {
   ".css": "css",
   ".vue": "vue",
   ".php": "php",
+  ".nix": "nix",
+  ".yaml": "yaml",
+  ".yml": "yaml",
 };
 
 /** Get the language ID for a file path based on extension */

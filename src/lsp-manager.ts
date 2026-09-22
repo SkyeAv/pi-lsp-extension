@@ -44,6 +44,10 @@ const DEFAULT_SERVERS: Record<string, ServerConfig> = {
   python: { command: "pyright-langserver", args: ["--stdio"] },
   go: { command: "gopls", args: ["serve"] },
   java: { command: "jdtls", args: [] },
+  nix: { command: "nixd", args: [] },
+  yaml: { command: "yaml-language-server", args: ["--stdio"] },
+  elixir: { command: "elixir-ls", args: [] },
+  scala: { command: "metals", args: [] },
 };
 
 // File extension → language ID mapping is in shared/language-map.ts
@@ -260,6 +264,8 @@ export class LspManager {
         return "This typically takes 10-30s for Python.";
       case "go":
         return "This typically takes 10-30s for Go.";
+      case "scala":
+        return "This typically takes 1-3 minutes for Scala (Metals imports + indexing).";
       default:
         return "This may take a few seconds to a minute.";
     }
